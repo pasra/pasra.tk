@@ -171,3 +171,39 @@ div#box li {
 	position: relative;
 	display: none;
 }
+
+/* tumblr */
+
+ul.chat {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 40px;
+  width: 520px;
+}
+
+div#box ul.chat li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 0;
+  /*margin-left: 50px;*/
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+ul.chat li.even {
+  display:block;
+  background-color: rgba(255,255,255,0.02);
+}
+
+ul.chat {
+  border: 1px solid #252525;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+
+ul.chat li span.label {
+  font-weight: bold;
+}
