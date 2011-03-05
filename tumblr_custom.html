@@ -5,41 +5,118 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<title>Team Pasra　- Server</title>
+<title>{Title}</title>
 <meta name="Content-Language" content="ja" />
 <meta name="Robots" content="INDEX,FOLLOW" />
-<link rel="stylesheet" type="text/css" href="css/common.css"/>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/kunekune.js"></script>
+<link rel="stylesheet" type="text/css" href="http://pasra.tk/css/common.css"/>
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<script type="text/javascript" src="http://pasra.tk/js/jquery.js"></script>
 </head>
 <body>
-<!--[if lte IE 6]><script src="js/ie6.js"></script><script>window.onload=function(){ie6_sine()}</script><![endif]-->
+<!--[if lte IE 6]><script src="http://pasra.tk/js/ie6.js"></script><script>window.onload=function(){ie6_sine()}</script><![endif]-->
 <div id="base">
   <div id="header">
     <div id="title">
-      <h1><a title="Team Pasra" href="/"><img alt="Team Pasra" src="images/common/dummy.gif" />Team Pasra</a></h1>
+      <h1><a title="Team Pasra" href="http://pasra.tk/"><img alt="Team Pasra" src="images/common/dummy.gif" />Team Pasra</a></h1>
     </div>
     <div id="menu">
       <ul>
-        <li><strong><a title="Team Pasra Top" href="../"></a></strong></li>
-        <li><strong><a title="About" href="about.html"></a></strong></li>
-        <li><strong><a title="Join" href="join.html"></a></strong></li>
-        <li><strong><a class="active" title="Server" href="server.html"></a></strong></li>
+        <li><strong><a title="Team Pasra Top" href="http://pasra.tk/"></a></strong></li>
+        <li><strong><a title="About" href="http://pasra.tk/about.html"></a></strong></li>
+        <li><strong><a title="Join" href="http://pasra.tk/join.html"></a></strong></li>
+        <li><strong><a class="active" title="Activity" href="/"></a></strong></li>
       </ul>
     </div>
   </div>
   <div id="members">
     <div id="box">
-      <h2>&quot;Left 4 Dead 2&quot; Server</h2>
-      <p>Steam Group Serverで、計4つのServerを提供しています。</p>
-      <p>基本的に、pasra内でLeft 4 Dead 2 を楽しむ時に使用しています。</p>
-      <h2>&quot;TeamSpeak3&quot; Server</h2>
-      <p>仲間内での雑談や、ゲームプレイ時の連携に使用しています。</p>
-      <p>Server : privs.net:9987</p>
-      <h2>&quot;TrueConbat:Elite&quot; Server</h2>
-      <p>pasraメンバーの練習用として提供しています。<br />
-        使用の際はメンバーへ問い合わせを。</p>
+      {block:Posts}
+        {block:Text}
+          {block:Title}
+            <h2><a href="{Permalink}">{Title}</a></h2>
+          {/block:Title}
+          {Body}
+        {/block:Text}
+
+        {block:Photo}
+            <h2>Photo</h2>
+            <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+            {block:Caption}
+                <div class="caption">{Caption}</div>
+            {/block:Caption}
+          </li>
+        {/block:Photo}
+        
+        {block:Photoset}
+          <h2>Photoset</h2>
+          {Photoset-500}
+
+          {block:Caption}
+            <div class="caption">{Caption}</div>
+          {/block:Caption}
+        {/block:Photoset}
+
+        {block:Quote}
+          <h2>引用</h2>
+          "{Quote}"
+
+          {block:Source}
+            <div class="source">{Source}</div>
+          {/block:Source}
+        {/block:Quote}
+
+        {block:Link}
+          <h2><a href="{URL}" class="link" {Target}>{Name}</a></h2>
+          <div class="description">{Description}</div>
+        {/block:Link}
+
+        {block:Chat}
+          {block:Title}
+            <h2><a href="{Permalink}">{Title}</a></h2>
+          {/block:Title}
+
+          {block:Lines}
+            <li class="{Alt} user_{UserNumber}">
+              {block:Label}
+                <span class="label">{Label}</span>
+              {/block:Label}
+
+              {Line}
+            </li>
+          {/block:Lines}
+        {/block:Chat}
+
+        {block:Video}
+          <h2>Video</h2>
+          {Video-500}
+
+          {block:Caption}
+              <div class="caption">{Caption}</div>
+          {/block:Caption}
+        {/block:Video}
+
+        {block:Audio}
+          <h2>Audio</h2>
+          {AudioPlayerBlack}
+
+          {block:Caption}
+              <div class="caption">{Caption}</div>
+          {/block:Caption}
+        {/block:Audio}
+          <p class="editpage"><a rel="nofollow" href="http://www.tumblr.com/edit/{PostID}">edit</a>
+      {/block:Posts}
     </div>
+
+    {block:PreviousPage}
+        <a href="{PreviousPage}">&#171; Previous</a>
+    {/block:PreviousPage}
+
+    {block:NextPage}
+        <a href="{NextPage}">Next &#187;</a>
+    {/block:NextPage}
+
+    <a href="/archive">Archive</a>
   </div>
 </div>
 </body>
