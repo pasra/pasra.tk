@@ -207,3 +207,11 @@ ul.chat {
 ul.chat li span.label {
   font-weight: bold;
 }
+
+h2 a, h2 a:visited {
+  text-decoration: none;
+	color: #9aa0a1;
+}
+h2 a:hover {
+	color: #cccfd0;
+}
