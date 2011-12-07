@@ -3,7 +3,6 @@ $(function() {
   intervals = [];
   hover_in = function(e) {
     var comment, comments, f, jockey, jockey_, _i, _len, _ref;
-    console.log("in");
     $(".jockeyonme").hide();
     $("#orig_inner").fadeOut(200, function() {
       $("#desc_inner").fadeOut(200, function() {
@@ -49,7 +48,6 @@ $(function() {
   };
   hover_out = function(e) {
     var interval, _i, _len;
-    console.log("out");
     $("#desc_inner").fadeOut(100, function() {
       return $("#orig_inner").fadeIn(200);
     });

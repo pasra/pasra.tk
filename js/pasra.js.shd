@@ -4,7 +4,6 @@
 $ ->
   intervals = []
   hover_in = (e) ->
-    console.log "in"
     $(".jockeyonme").hide()
     $("#orig_inner").fadeOut 200, ->
       $("#desc_inner").fadeOut 200, ->
@@ -37,7 +36,6 @@ $ ->
 
     intervals.push setInterval(f, 3000)
   hover_out = (e) ->
-    console.log "out"
     $("#desc_inner").fadeOut(100, -> $("#orig_inner").fadeIn(200))
     clearInterval(interval) for interval in intervals
     intervals = []

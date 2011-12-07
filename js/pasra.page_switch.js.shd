@@ -1,5 +1,2 @@
 ## coffee -csb
 # vim: filetype=coffee
-
-$ ->
-  get_page = (name) -> []
