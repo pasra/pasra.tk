@@ -1,0 +1,38 @@
+## coffee -csb
+# vim: filetype=coffee
+
+$ ->
+  intervals = []
+  hover_in = (e) ->
+    $(".jockeyonme").hide()
+    $("#desc_inner").fadeOut(300, -> $(this).html($(e.currentTarget).find(".member_desc").html()).fadeIn(300))
+    for jockey_ in $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme")
+      jockey = $(jockey_)
+
+      comment = jockey.find(".comment")
+      comments = jockey.find(".comment_to_#{e.currentTarget.id.replace(/^icon_/,"")} li")
+      i = 0
+
+      comment.html comments[i].innerHTML
+      comment.show()
+      jockey.fadeIn('fast')
+
+
+    i = 0
+    f = ->
+      i += 1
+      i = 0 if i >= comments.length
+      for jockey_ in $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme")
+        jockey = $(jockey_)
+
+        comment = jockey.find(".comment")
+        comments = jockey.find(".comment_to_#{e.currentTarget.id.replace(/^icon_/,"")} li")
+        comment.fadeOut(500, -> $(this).html(comments[i].innerHTML).fadeIn(500))
+
+    intervals.push setInterval(f, 3000)
+  hover_out = (e) ->
+    clearInterval(interval) for interval in intervals
+    intervals = []
+    $(".jockeyonme").fadeOut('fast')
+
+  $("div.icon_box").hover hover_in, hover_out

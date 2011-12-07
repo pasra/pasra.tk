@@ -169,3 +169,23 @@ div#footer {
 	margin: 0px auto 0px auto;
 	background: url("../images/common/footer.png") no-repeat;
 }
+
+.jockeyonme {
+  display: none;
+  position: relative;
+  z-index: 100;
+  top: -210px;
+}
+
+.member_desc {
+  display: none;
+}
+
+.comments {
+  display: none;
+}
+
+.comment {
+  position: relative;
+  bottom: 30px;
+}
