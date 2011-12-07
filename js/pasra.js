@@ -26,23 +26,23 @@ $(function() {
       jockey.fadeIn('fast');
     }
     f = function() {
-      var jockey_, _j, _len2, _ref2, _results;
-      _ref2 = $(".icon_box[id!='" + e.currentTarget.id + "'] .jockeyonme");
-      _results = [];
-      for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
-        jockey_ = _ref2[_j];
-        jockey = $(jockey_);
+      return $(".icon_box[id!='" + e.currentTarget.id + "'] .jockeyonme").each(function() {
+        jockey = $(this);
         comments = jockey.find(".comment_to_" + (e.currentTarget.id.replace(/^icon_/, "")) + " li");
+        console.log(".comment_to_" + (e.currentTarget.id.replace(/^icon_/, "")) + " li");
+        console.log($(this).closest(".icon_box"));
+        console.log(comments);
         comment = jockey.find(".comment");
         comment[0].i += 1;
         if (comment[0].i >= comments.length) {
           comment[0].i = 0;
         }
-        _results.push(comment.fadeOut(500, function() {
-          return $(this).html(comments[comment[0].i || 0].innerHTML).fadeIn(500);
-        }));
-      }
-      return _results;
+        return comment.fadeOut(500, (function(com) {
+          return function() {
+            return $(this).html(com).fadeIn(500);
+          };
+        })(comments[comment[0].i].innerHTML));
+      });
     };
     return intervals.push(setInterval(f, 3000));
   };

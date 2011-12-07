@@ -24,15 +24,18 @@ $ ->
       jockey.fadeIn('fast')
 
     f = ->
-      for jockey_ in $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme")
-        jockey = $(jockey_)
+      $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme").each ->
+        jockey = $(this)
 
         comments = jockey.find(".comment_to_#{e.currentTarget.id.replace(/^icon_/,"")} li")
+        console.log ".comment_to_#{e.currentTarget.id.replace(/^icon_/,"")} li"
+        console.log $(this).closest(".icon_box")
+        console.log comments
         comment = jockey.find(".comment")
 
         comment[0].i += 1
         comment[0].i = 0 if comment[0].i >= comments.length
-        comment.fadeOut(500, -> $(this).html(comments[comment[0].i || 0].innerHTML).fadeIn(500))
+        comment.fadeOut(500, ((com)-> (-> $(this).html(com).fadeIn(500)))(comments[comment[0].i].innerHTML))
 
     intervals.push setInterval(f, 3000)
   hover_out = (e) ->
