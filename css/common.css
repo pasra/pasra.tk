@@ -197,3 +197,12 @@ div#footer {
 .page_inactive {
   display: none;
 }
+
+#desc_inner dl {
+  text-align: left;
+}
+#desc_inner dl dt {
+  float: left;
+  width: 30%;
+}
+
