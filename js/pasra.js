@@ -2,10 +2,10 @@ $(function() {
   var hover_in, hover_out, intervals;
   intervals = [];
   hover_in = function(e) {
-    var comment, comments, f, i, jockey, jockey_, _i, _len, _ref;
+    var comment, comments, f, jockey, jockey_, _i, _len, _ref;
     $(".jockeyonme").hide();
-    $("#desc_inner").fadeOut(300, function() {
-      return $(this).html($(e.currentTarget).find(".member_desc").html()).fadeIn(300);
+    $("#desc_inner").fadeOut(200, function() {
+      return $(this).html($(e.currentTarget).find(".member_desc").html()).fadeIn(100);
     });
     _ref = $(".icon_box[id!='" + e.currentTarget.id + "'] .jockeyonme");
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -13,27 +13,26 @@ $(function() {
       jockey = $(jockey_);
       comment = jockey.find(".comment");
       comments = jockey.find(".comment_to_" + (e.currentTarget.id.replace(/^icon_/, "")) + " li");
-      i = 0;
-      comment.html(comments[i].innerHTML);
+      comment[0].i = 0;
+      comment.html(comments[0].innerHTML);
       comment.show();
       jockey.fadeIn('fast');
     }
-    i = 0;
     f = function() {
       var jockey_, _j, _len2, _ref2, _results;
-      i += 1;
-      if (i >= comments.length) {
-        i = 0;
-      }
       _ref2 = $(".icon_box[id!='" + e.currentTarget.id + "'] .jockeyonme");
       _results = [];
       for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
         jockey_ = _ref2[_j];
         jockey = $(jockey_);
-        comment = jockey.find(".comment");
         comments = jockey.find(".comment_to_" + (e.currentTarget.id.replace(/^icon_/, "")) + " li");
+        comment = jockey.find(".comment");
+        comment[0].i += 1;
+        if (comment[0].i >= comments.length) {
+          comment[0].i = 0;
+        }
         _results.push(comment.fadeOut(500, function() {
-          return $(this).html(comments[i].innerHTML).fadeIn(500);
+          return $(this).html(comments[comment[0].i || 0].innerHTML).fadeIn(500);
         }));
       }
       return _results;
