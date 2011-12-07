@@ -115,7 +115,7 @@ div#header div#menu ul li a.active {
 }
 /* コンテンツ */
 
-div#content {
+div.page {
 	background: url("../images/common/back.png") repeat-y;
 	width: 800px;
 }
@@ -191,5 +191,9 @@ div#footer {
 }
 
 #desc_inner {
+  display: none;
+}
+
+.page_inactive {
   display: none;
 }

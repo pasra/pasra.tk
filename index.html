@@ -10,7 +10,7 @@
     <meta name="Description" content="学生エンジニアチームPasraの公式ページ。">
     <link rel="stylesheet" type="text/css" href="css/common.css" >
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="js/pasra.js"></script>
+    <script src="js/page_switch.js"></script>
   </head>
   <body>
     <!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" height="42" width="820" alt="" /></a></div> <![endif]-->
@@ -21,13 +21,14 @@
         </div>
         <div id="menu">
           <ul>
-            <li><strong><a class="active" title="Team Pasra Top" href="../"></a></strong></li>
-            <li><strong><a title="About" href="about.html"></a></strong></li>
+            <li><strong><a class="active" title="Team Pasra Top" href="index.html"></a></strong></li>
+            <li><strong><a title="Services" href="services.html"></a></strong></li>
             <li><strong><a title="Join" href="join.html"></a></strong></li>
           </ul>
         </div>
       </div>
-      <div id="content">
+      <div data-content-name="index.html" class="page">
+        <script src="js/pasra.js"></script>
         <div class="box">
           <div class="box_3_side icon_box" id="icon_akazora">
             <img src="images/common/akazora.png" width="210" height="210" alt="akazora" class="icon">
