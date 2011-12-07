@@ -1,6 +1,16 @@
 $(function() {
-  var hover_in, hover_out, intervals;
+  var hover_in, hover_out, intervals, queue, queue_run;
   intervals = [];
+  queue = [];
+  queue_run = function() {
+    var fun;
+    fun = queue.shift();
+    if (fun) {
+      fun();
+    }
+    return setTimeout(queue_run, 100);
+  };
+  setTimeout(queue_run, 1);
   hover_in = function(e) {
     var comment, comments, f, jockey, jockey_, _i, _len, _ref;
     $(".jockeyonme").hide();
@@ -29,9 +39,6 @@ $(function() {
       return $(".icon_box[id!='" + e.currentTarget.id + "'] .jockeyonme").each(function() {
         jockey = $(this);
         comments = jockey.find(".comment_to_" + (e.currentTarget.id.replace(/^icon_/, "")) + " li");
-        console.log(".comment_to_" + (e.currentTarget.id.replace(/^icon_/, "")) + " li");
-        console.log($(this).closest(".icon_box"));
-        console.log(comments);
         comment = jockey.find(".comment");
         comment[0].i += 1;
         if (comment[0].i >= comments.length) {
@@ -49,7 +56,8 @@ $(function() {
   hover_out = function(e) {
     var interval, _i, _len;
     $("#desc_inner").fadeOut(100, function() {
-      return $("#orig_inner").fadeIn(200);
+      $("#orig_inner").fadeIn(200);
+      return $("#desc_inner").hide();
     });
     for (_i = 0, _len = intervals.length; _i < _len; _i++) {
       interval = intervals[_i];
@@ -58,5 +66,13 @@ $(function() {
     intervals = [];
     return $(".jockeyonme").fadeOut('fast');
   };
-  return $("div.icon_box").hover(hover_in, hover_out);
+  return $("div.icon_box").hover((function(e) {
+    return queue.push(function() {
+      return hover_in(e);
+    });
+  }), (function(e) {
+    return queue.push(function() {
+      return hover_out(e);
+    });
+  }));
 });
