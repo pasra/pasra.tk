@@ -189,3 +189,7 @@ div#footer {
   position: relative;
   bottom: 30px;
 }
+
+#desc_inner {
+  display: none;
+}

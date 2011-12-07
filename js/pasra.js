@@ -3,10 +3,18 @@ $(function() {
   intervals = [];
   hover_in = function(e) {
     var comment, comments, f, jockey, jockey_, _i, _len, _ref;
+    console.log("in");
     $(".jockeyonme").hide();
-    $("#desc_inner").fadeOut(200, function() {
-      return $(this).html($(e.currentTarget).find(".member_desc").html()).fadeIn(100);
+    $("#orig_inner").fadeOut(200, function() {
+      $("#desc_inner").fadeOut(200, function() {
+        $("#orig_inner").hide();
+        return $(this).html($(e.currentTarget).find(".member_desc").html()).fadeIn(100, function() {
+          return $("#orig_inner").hide();
+        });
+      });
+      return $("#orig_inner").hide();
     });
+    $("#orig_inner").hide();
     _ref = $(".icon_box[id!='" + e.currentTarget.id + "'] .jockeyonme");
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       jockey_ = _ref[_i];
@@ -41,6 +49,10 @@ $(function() {
   };
   hover_out = function(e) {
     var interval, _i, _len;
+    console.log("out");
+    $("#desc_inner").fadeOut(100, function() {
+      return $("#orig_inner").fadeIn(200);
+    });
     for (_i = 0, _len = intervals.length; _i < _len; _i++) {
       interval = intervals[_i];
       clearInterval(interval);
