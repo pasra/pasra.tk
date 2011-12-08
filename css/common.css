@@ -77,41 +77,34 @@ div#header div#menu {
 	width: 800px;
 	height: 80px;
 	text-align: center;
-	background: url("../images/common/menu.png") no-repeat;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
+}
+.top{
+	background: url("../images/common/menu.png") no-repeat;
+}
+.services{
+	background: url("../images/common/menu_s.png") no-repeat;
 }
 div#header div#menu ul {
 	list-style-type: none;
 	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 205px;
+	margin: 0px 0px 0px 34px;
 }
 div#header div#menu ul li {
 	float: left;
-	width: 102.5px;
+	width: 225px;
 	list-style-type: none;
 	text-align: center;
 	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 15px;
 }
 div#header div#menu ul li a {
 	display: block;
 	color: #CCC;
-	height: 45px;
+	height: 65px;
 	text-decoration: none;
 	line-height: 45px;
-	background: url("../images/common/overme.png") no-repeat 0px 0px;
-}
-div#header div#menu ul li a:hover {
-	background-position: 0px -45px;
-}
-div#header div#menu ul li a.active {
-	display: block;
-	color: #CCC;
-	height: 45px;
-	text-decoration: none;
-	line-height: 45px;
-	background: url("../images/common/menuac.png") no-repeat 0px 0px;
 }
 /* コンテンツ */
 
@@ -205,4 +198,28 @@ div#footer {
   float: left;
   width: 30%;
 }
+
+.post_box {
+  height: auto;
+  text-align: left;
+  clear:both;
+  display: block;
+}
+
+.post_box .box_post_left {
+  width: 80px;
+  float: left;
+  display: block;
+}
+
+.post_box .box_post_right {
+  float: left;
+  display: block;
+}
+
+.post_box .box_post_right h2 {
+  margin-left: 0;
+
+}
+
 

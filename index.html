@@ -1,518 +1,630 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <title>Team Pasra</title>
-    <meta name="Content-Language" content="ja">
-    <meta name="Robots" content="INDEX,FOLLOW">
-    <meta name="Description" content="学生エンジニアチームPasraの公式ページ。">
-    <link rel="stylesheet" type="text/css" href="css/common.css" >
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  </head>
-  <body>
-    <!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" height="42" width="820" alt="" /></a></div> <![endif]-->
-    <div id="base">
-      <div id="header">
-        <div id="title">
-          <h1><a title="Team Pasra" href="/"><img alt="Team Pasra" src="images/common/dummy.gif" />Team Pasra</a></h1>
-        </div>
-        <div id="menu">
-          <ul>
-            <li><strong><a class="active" title="Team Pasra Top" href="index.html"></a></strong></li>
-            <li><strong><a title="Services" href="services.html"></a></strong></li>
-            <li><strong><a title="Join" href="join.html"></a></strong></li>
-          </ul>
-        </div>
-      </div>
-      <div data-content-name="index.html" class="page">
-        <script src="js/pasra.js"></script>
-        <div class="box">
-          <div class="box_3_side icon_box" id="icon_akazora">
-            <img src="images/common/akazora.png" width="210" height="210" alt="akazora" class="icon">
-            <div class="jockeyonme">
-              <img src="images/common/hover.png" width="210" height="210">
-              <div class="comment">comment</div>
-              <div class="comments">
-                <ul class="comment_to_akazora">
-                </ul>
-                <ul class="comment_to_sorah">
-                  <li>滑舌悪いドヤ顔</li>
-                  <li>ウザキモい</li>
-                  <li>キチガイエンジニア組</li>
-                </ul>
-                <ul class="comment_to_tnk">
-                  <li>アイコン生みの親</li>
-                  <li>誰も逆らえない</li>
-                  <li>常識組</li>
-                </ul>
-                <ul class="comment_to_mactkg">
-                  <li>腐ったたまご</li>
-                  <li>はんだづけ</li>
-                  <li>キチガイ組</li>
-                </ul>
-                <ul class="comment_to_chihirow">
-                  <li>空気読めない妖精</li>
-                  <li>性別不詳</li>
-                  <li>常識組（？）</li>
-                </ul>
-                <ul class="comment_to_pastak">
-                  <li>あの娘LOVE</li>
-                  <li>叫び</li>
-                  <li>常識組</li>
-                </ul>
-                <ul class="comment_to_moccai">
-                  <li>ソノベ</li>
-                  <li>エアブレイカー</li>
-                  <li>常識組</li>
-                </ul>
-                <ul class="comment_to_glass">
-                  <li>＾ー＾</li>
-                  <li>エアブレイカー</li>
-                  <li>キチガイエンジニア組</li>
-                </ul>
-                <ul class="comment_to_pasra">
-                  <li>キチガイ達の最終処分場</li>
-                  <li>FPSやるも協調性のなさで自滅</li>
-                  <li>是非今後も頑張りましょう。</li>
-                </ul>
-              </div>
-            </div>
-            <div class="member_desc">
-              <span class="name">
-                <h3>akazora(FlanC**)</h3>
-              </span>
-              <dl>
-                <dt>Gender</dt>
-                <dd>Male</dd>
-              </dl>
-              <dl>
-                <dt>Birthday</dt>
-                <dd>1994/10/05</dd>
-              </dl>
-              <dl>
-                <dt>Egogram</dt>
-                <dd>baaba</dd>
-              </dl>
-              <dl>
-                <dt>FPS力</dt>
-                <dd>A+</dd>
-              </dl>
-              <dl>
-                <dt>出現率</dt>
-                <dd>B</dd>
-              </dl>
-            </div>
-          </div>
-          <div class="box_3_center icon_box" id="icon_sorah">
-            <img src="images/common/sorah.png" width="210" height="210" alt="sorah" class="icon">
-            <div class="jockeyonme">
-              <img src="images/common/hover.png" width="210" height="210">
-              <div class="comment">comment</div>
-              <div class="comments">
-                <ul class="comment_to_akazora">
-                  <li>pasraの常識</li>
-                  <li>メンヘラLOVE&heart;</li>
-                  <li>イケメンボイス</li>
-                  <li>異常知能</li>
-                  <li>罵倒もやさしさの内</li>
-                  <li>実は一番キチガイなのでは?</li>
-                </ul>
-                <ul class="comment_to_sorah">
-                </ul>
-                <ul class="comment_to_tnk">
-                  <li>世間の常識</li>
-                  <li>姉さん</li>
-                  <li>ヒエラルキーのトップ</li>
-                  <li>絵かき!</li>
-                  <li>pasraに常識をもたらすさゆさゆ</li>
-                  <li>過疎防止剤</li>
-                </ul>
-                <ul class="comment_to_mactkg">
-                  <li>たまご</li>
-                  <li>割れろ</li>
-                  <li>高木</li>
-                  <li>はんだづけ</li>
-                  <li>キチガイ</li>
-                  <li>オワコン</li>
-                </ul>
-                <ul class="comment_to_chihirow">
-                  <li>神経科学</li>
-                  <li>何をやっているのかわからない</li>
-                  <li>そういえば．</li>
-                  <li>そういえばおれはもうだめだ</li>
-                  <li>空気を読もう</li>
-                </ul>
-                <ul class="comment_to_pastak">
-                  <li>あの娘</li>
-                  <li>麺類</li>
-                  <li>京都</li>
-                  <li>恋バナ担当</li>
-                  <li>癒しの歌</li>
-                  <li>叫び</li>
-                </ul>
-                <ul class="comment_to_moccai">
-                  <li>キラッ☆</li>
-                  <li>京都</li>
-                  <li>謎</li>
-                </ul>
-                <ul class="comment_to_glass">
-                  <li>はい</li>
-                  <li>定評のある見捨て担当</li>
-                  <li>空気を読もう</li>
-                  <li>協調性を持とう</li>
-                  <li>セプキャン2011同期</li>
-                </ul>
-                <ul class="comment_to_pasra">
-                  <li>キチガイの溜まり場</li>
-                  <li>無駄に優秀な人材が</li>
-                  <li>これからも頑張りましょう</li>
-                </ul>
-              </div>
-            </div>
-            <div class="member_desc">
-              <span class="name">そらはー</span>
-              <dl>
-                <dt>あ</dt><dd>い</dd>
-              </dl>
-            </div>
-          </div>
-          <div class="box_3_side icon_box" id="icon_tnk">
-            <img src="images/common/tnk.png" width="210" height="210" alt="tnk" class="icon">
-            <div class="jockeyonme">
-              <img src="images/common/hover.png" width="210" height="210">
-              <div class="comment">comment</div>
-              <div class="comments">
-                <ul class="comment_to_akazora">
-                  <li>生粋のメンヘラ好き</li>
-                  <li>イケボ</li>
-                  <li>カウンセラー</li>
-                </ul>
-                <ul class="comment_to_sorah">
-                  <li>クズ</li>
-                  <li>＼いい加減にしてっ／</li>
-                </ul>
-                <ul class="comment_to_tnk">
-                </ul>
-                <ul class="comment_to_mactkg">
-                  <li>老け顔たまご</li>
-                  <li>似非男子高校生</li>
-                </ul>
-                <ul class="comment_to_chihirow">
-                  <li>おんなのこ</li>
-                  <li>かわいい</li>
-                </ul>
-                <ul class="comment_to_pastak">
-                  <li>低身長</li>
-                  <li>あの娘あの娘あの娘</li>
-                </ul>
-                <ul class="comment_to_moccai">
-                  <li>ツンデレ</li>
-                  <li>Androider</li>
-                </ul>
-                <ul class="comment_to_glass">
-                  <li>人の話を聞け</li>
-                  <li>りむられったー</li>
-                </ul>
-                <ul class="comment_to_pasra">
-                  <li>クズの集まり</li>
-                  <li>今後の活躍にもご期待ください</li>
-                </ul>
-              </div>
-            </div>
-            <div class="member_desc">
-              <span class="name">たなか</span>
-              <dl>
-                <dt>あ</dt><dd>い</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div class="box_center">
-          <div class="box_3_side icon_box" id="icon_mactkg">
-            <img src="images/common/mactkg.png" width="210" height="210" alt="mactkg" class="icon">
-            <div class="jockeyonme">
-              <img src="images/common/hover.png" width="210" height="210">
-              <div class="comment">comment</div>
-              <div class="comments">
-                <ul class="comment_to_akazora">
-                  <li>歌って踊れるデザイナー</li>
-                  <li>Pasraの秩序</li>
-                </ul>
-                <ul class="comment_to_sorah">
-                  <li>ドヤ顔Rubyコミッター</li>
-                  <li>最も協調性のないメンバー</li>
-                </ul>
-                <ul class="comment_to_tnk">
-                  <li>常識人担当</li>
-                  <li>納期をお知らせするお姉様</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_mactkg">
-                </ul>
-                <ul class="comment_to_chihirow">
-                  <li>Pasraのスパイス</li>
-                  <li>常識人時々エスパー</li>
-                </ul>
-                <ul class="comment_to_pastak">
-                  <li>Pasraの料理長</li>
-                  <li>一途</li>
-                </ul>
-                <ul class="comment_to_moccai">
-                  <li>アイドル担当</li>
-                  <li>安定したカラオケボイス</li>
-                </ul>
-                <ul class="comment_to_glass">
-                  <li>hiの人</li>
-                  <li>sora_hの弟子</li>
-                </ul>
-                <ul class="comment_to_pasra">
-                  <li>美味しいレストランなのに</li>
-                  <li>一切料理の話題ない。</li>
-                  <li>ゲームしかしてなくてすいません</li>
-                </ul>
-              </div>
-            </div>
-            <div class="member_desc">
-              <span class="name">たまご</span>
-              <dl>
-                <dt>あ</dt><dd>い</dd>
-              </dl>
-            </div>
-          </div>
-          <div class="box_3_center icon_box" id="icon_pasra">
-            <div id="desc_inner"> </div>
-            <div id="orig_inner">
-              <p><img src="images/common/pasra.png" width="210" height="210" alt="pasra" class="icon"></p>
-            </div>
-            <div class="member_desc">
-              <p>Team Pasra とは</p>
-            </div>
-          </div>
-          <div class="box_3_side icon_box" id="icon_chihirow">
-            <img src="images/common/chihirow.png" width="210" height="210" alt="chihirow" class="icon">
-            <div class="jockeyonme">
-              <img src="images/common/hover.png" width="210" height="210">
-              <div class="comment">comment</div>
-              <div class="comments">
-                <ul class="comment_to_akazora">
-                  <li>優しい</li>
-                  <li>リーダー的存在</li>
-                </ul>
-                <ul class="comment_to_sorah">
-                  <li>Ruby</li>
-                  <li>笑い声が素敵</li>
-                </ul>
-                <ul class="comment_to_tnk">
-                  <li>いたら楽しい</li>
-                  <li>人間的に魅力</li>
-                </ul>
-                <ul class="comment_to_mactkg">
-                  <li>たまごかけごはん</li>
-                  <li>メディアアート</li>
-                </ul>
-                <ul class="comment_to_chihirow">
-                </ul>
-                <ul class="comment_to_pastak">
-                  <li>神出鬼没</li>
-                  <li>将来に期待</li>
-                </ul>
-                <ul class="comment_to_moccai">
-                  <li>もかもか</li>
-                  <li>一緒にゲームすることが多い</li>
-                </ul>
-                <ul class="comment_to_glass">
-                  <li>hi</li>
-                  <li>『ライ麦畑でつかまえて』</li>
-                </ul>
-                <ul class="comment_to_pasra">
-                  <li>学びの共同体</li>
-                  <li>おちつく空間</li>
-                </ul>
-              </div>
-            </div>
-            <div class="member_desc">
-              <span class="name">ちひちひ</span>
-              <dl>
-                <dt>あ</dt><dd>い</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="box_3_side icon_box" id="icon_pastak">
-            <img src="images/common/pastal.png" width="210" height="210" alt="pastak" class="icon">
-            <div class="jockeyonme">
-              <img src="images/common/hover.png" width="210" height="210">
-              <div class="comment">comment</div>
-              <div class="comments">
-                <ul class="comment_to_akazora">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_sorah">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_tnk">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_mactkg">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_chihirow">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_pastak">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_moccai">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_glass">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_pasra">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-              </div>
-            </div>
-            <div class="member_desc">
-              <span class="name">めんるい</span>
-              <dl>
-                <dt>あ</dt><dd>い</dd>
-              </dl>
-            </div>
-          </div>
-          <div class="box_3_center icon_box" id="icon_moccai">
-            <img src="images/common/moccai.png" width="210" height="210" alt="moccai" class="icon">
-            <div class="jockeyonme">
-              <img src="images/common/hover.png" width="210" height="210">
-              <div class="comment">comment</div>
-              <div class="comments">
-                <ul class="comment_to_akazora">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_sorah">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_tnk">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_mactkg">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_chihirow">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_pastak">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_moccai">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_glass">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-                <ul class="comment_to_pasra">
-                  <li>a</li>
-                  <li>b</li>
-                  <li>c</li>
-                </ul>
-              </div>
-            </div>
-            <div class="member_desc">
-              <span class="name">もっかい</span>
-              <dl>
-                <dt>あ</dt><dd>い</dd>
-              </dl>
-            </div>
-          </div>
-          <div class="box_3_side icon_box" id="icon_glass">
-            <img src="images/common/glass.png" width="210" height="210" alt="glass_saga" class="icon">
-            <div class="jockeyonme">
-              <img src="images/common/hover.png" width="210" height="210">
-              <div class="comment">comment</div>
-              <div class="comments">
-                <ul class="comment_to_akazora">
-                  <li>俺に冷たい</li>
-                  <li>高知能</li>
-                </ul>
-                <ul class="comment_to_sorah">
-                  <li>ておくれ</li>
-                  <li>Rubyの人</li>
-                </ul>
-                <ul class="comment_to_tnk">
-                  <li>がんばって下さい</li>
-                  <li>雑談担当</li>
-                </ul>
-                <ul class="comment_to_mactkg">
-                  <li>XD</li>
-                  <li>漂うリア充感</li>
-                </ul>
-                <ul class="comment_to_chihirow">
-                  <li>くま</li>
-                  <li>渾身のg91ブログ</li>
-                </ul>
-                <ul class="comment_to_pastak">
-                  <li>頑張って下さい</li>
-                  <li>文章書ける</li>
-                </ul>
-                <ul class="comment_to_moccai">
-                  <li>無線</li>
-                  <li>ブラ三</li>
-                </ul>
-                <ul class="comment_to_glass">
-                </ul>
-                <ul class="comment_to_pasra">
-                  <li>基本的にゲームしかしてない</li>
-                  <li>認めざるを得ないアスペ率の高さ</li>
-                </ul>
-              </div>
-            </div>
-            <div class="member_desc">
-              <span class="name">ぐらす</span>
-              <dl>
-                <dt>あ</dt><dd>い</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="footer"><img alt="" src="images/common/dummy.gif"></div>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>Team Pasra</title>
+<meta name="Content-Language" content="ja">
+<meta name="Robots" content="INDEX,FOLLOW">
+<meta name="Description" content="No teamwork team "Team Pasra" Official Page">
+<link rel="stylesheet" type="text/css" href="css/common.css" >
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" height="42" width="820" alt="" /></a></div> <![endif]-->
+<div id="base">
+  <div id="header">
+    <div id="title">
+      <h1><a title="Team Pasra" href="/"><img alt="Team Pasra" src="images/common/dummy.gif" />Team Pasra</a></h1>
     </div>
-  </body>
+    <div id="menu" class="top">
+      <ul>
+        <li><strong><a title="Team Pasra Members" href="index.html"></a></strong></li>
+        <li><strong><a title="Services" href="services.html"></a></strong></li>
+        <li><strong><a title="Logs" href="#"></a></strong></li>
+      </ul>
+    </div>
+  </div>
+  <div data-content-name="index.html" class="page"> 
+    <script src="js/pasra.js"></script>
+    <div class="box">
+      <div class="box_3_side icon_box" id="icon_akazora"> <img src="images/common/akazora.png" width="210" height="210" alt="akazora" class="icon">
+        <div class="jockeyonme"> <img src="images/common/hover.png" width="210" height="210">
+          <div class="comment">comment</div>
+          <div class="comments">
+            <ul class="comment_to_akazora">
+            </ul>
+            <ul class="comment_to_sorah">
+              <li>滑舌悪いドヤ顔</li>
+              <li>ウザキモい</li>
+              <li>キチガイエンジニア組</li>
+            </ul>
+            <ul class="comment_to_tnk">
+              <li>アイコン生みの親</li>
+              <li>誰も逆らえない</li>
+              <li>常識組</li>
+            </ul>
+            <ul class="comment_to_mactkg">
+              <li>腐ったたまご</li>
+              <li>はんだづけ</li>
+              <li>キチガイ組</li>
+            </ul>
+            <ul class="comment_to_chihirow">
+              <li>空気読めない妖精</li>
+              <li>性別不詳</li>
+              <li>常識組（？）</li>
+            </ul>
+            <ul class="comment_to_pastak">
+              <li>あの娘LOVE</li>
+              <li>叫び</li>
+              <li>常識組</li>
+            </ul>
+            <ul class="comment_to_moccai">
+              <li>ソノベ</li>
+              <li>エアブレイカー</li>
+              <li>常識組</li>
+            </ul>
+            <ul class="comment_to_glass">
+              <li>＾ー＾</li>
+              <li>エアブレイカー</li>
+              <li>キチガイエンジニア組</li>
+            </ul>
+            <ul class="comment_to_pasra">
+              <li>キチガイ達の最終処分場</li>
+              <li>FPSやるも協調性のなさで自滅</li>
+              <li>是非今後も頑張りましょう。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member_desc"> <span class="name">
+          <h3>akazora(FlanC**)</h3>
+          </span>
+          <dl>
+            <dt>Gender</dt>
+            <dd>Male</dd>
+          </dl>
+          <dl>
+            <dt>Birthday</dt>
+            <dd>1994/10/5</dd>
+          </dl>
+          <dl>
+            <dt>Egogram</dt>
+            <dd>baaba</dd>
+          </dl>
+          <dl>
+            <dt>FPS力</dt>
+            <dd>A+</dd>
+          </dl>
+          <dl>
+            <dt>出現率</dt>
+            <dd>B+</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="box_3_center icon_box" id="icon_sorah"> <img src="images/common/sorah.png" width="210" height="210" alt="sorah" class="icon">
+        <div class="jockeyonme"> <img src="images/common/hover.png" width="210" height="210">
+          <div class="comment">comment</div>
+          <div class="comments">
+            <ul class="comment_to_akazora">
+              <li>pasraの常識</li>
+              <li>メンヘラLOVE&heart;</li>
+              <li>イケメンボイス</li>
+              <li>異常知能</li>
+              <li>罵倒もやさしさの内</li>
+              <li>実は一番キチガイなのでは?</li>
+            </ul>
+            <ul class="comment_to_sorah">
+            </ul>
+            <ul class="comment_to_tnk">
+              <li>世間の常識</li>
+              <li>姉さん</li>
+              <li>ヒエラルキーのトップ</li>
+              <li>絵かき!</li>
+              <li>pasraに常識をもたらすさゆさゆ</li>
+              <li>過疎防止剤</li>
+            </ul>
+            <ul class="comment_to_mactkg">
+              <li>たまご</li>
+              <li>割れろ</li>
+              <li>高木</li>
+              <li>はんだづけ</li>
+              <li>キチガイ</li>
+              <li>オワコン</li>
+            </ul>
+            <ul class="comment_to_chihirow">
+              <li>神経科学</li>
+              <li>何をやっているのかわからない</li>
+              <li>そういえば．</li>
+              <li>そういえばおれはもうだめだ</li>
+              <li>空気を読もう</li>
+            </ul>
+            <ul class="comment_to_pastak">
+              <li>あの娘</li>
+              <li>麺類</li>
+              <li>京都</li>
+              <li>恋バナ担当</li>
+              <li>癒しの歌</li>
+              <li>叫び</li>
+            </ul>
+            <ul class="comment_to_moccai">
+              <li>キラッ☆</li>
+              <li>京都</li>
+              <li>謎</li>
+            </ul>
+            <ul class="comment_to_glass">
+              <li>はい</li>
+              <li>定評のある見捨て担当</li>
+              <li>空気を読もう</li>
+              <li>協調性を持とう</li>
+              <li>セプキャン2011同期</li>
+            </ul>
+            <ul class="comment_to_pasra">
+              <li>キチガイの溜まり場</li>
+              <li>無駄に優秀な人材が</li>
+              <li>これからも頑張りましょう</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member_desc"> <span class="name">
+          <h3>Shota Fukumori</h3>
+          </span>
+          <dl>
+            <dt>Gender</dt>
+            <dd>Male</dd>
+          </dl>
+          <dl>
+            <dt>Birthday</dt>
+            <dd>1997/2/4</dd>
+          </dl>
+          <dl>
+            <dt>Egogram</dt>
+            <dd>bcaac</dd>
+          </dl>
+          <dl>
+            <dt>FPS力</dt>
+            <dd>F</dd>
+          </dl>
+          <dl>
+            <dt>出現率</dt>
+            <dd>A</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="box_3_side icon_box" id="icon_tnk"> <img src="images/common/tnk.png" width="210" height="210" alt="tnk" class="icon">
+        <div class="jockeyonme"> <img src="images/common/hover.png" width="210" height="210">
+          <div class="comment">comment</div>
+          <div class="comments">
+            <ul class="comment_to_akazora">
+              <li>生粋のメンヘラ好き</li>
+              <li>イケボ</li>
+              <li>カウンセラー</li>
+              <li>人生二周目</li>
+            </ul>
+            <ul class="comment_to_sorah">
+              <li>クズ</li>
+              <li>＼いい加減にしてっ／</li>
+            </ul>
+            <ul class="comment_to_tnk">
+            </ul>
+            <ul class="comment_to_mactkg">
+              <li>老け顔たまご</li>
+              <li>似非男子高校生</li>
+            </ul>
+            <ul class="comment_to_chihirow">
+              <li>おんなのこ</li>
+              <li>かわいい</li>
+            </ul>
+            <ul class="comment_to_pastak">
+              <li>低身長</li>
+              <li>あの娘あの娘あの娘</li>
+            </ul>
+            <ul class="comment_to_moccai">
+              <li>ツンデレ</li>
+              <li>Androider</li>
+            </ul>
+            <ul class="comment_to_glass">
+              <li>人の話を聞け</li>
+              <li>りむられったー</li>
+            </ul>
+            <ul class="comment_to_pasra">
+              <li>クズの集まり</li>
+              <li>今後の活躍にもご期待ください</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member_desc"> <span class="name">
+          <h3>tnk</h3>
+          </span>
+          <dl>
+            <dt>Gender</dt>
+            <dd>Famale</dd>
+          </dl>
+          <dl>
+            <dt>Birthday</dt>
+            <dd>1993/7/8</dd>
+          </dl>
+          <dl>
+            <dt>Egogram</dt>
+            <dd>baabb</dd>
+          </dl>
+          <dl>
+            <dt>FPS力</dt>
+            <dd>C</dd>
+          </dl>
+          <dl>
+            <dt>出現率</dt>
+            <dd>C+</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="box_center">
+      <div class="box_3_side icon_box" id="icon_mactkg"> <img src="images/common/mactkg.png" width="210" height="210" alt="mactkg" class="icon">
+        <div class="jockeyonme"> <img src="images/common/hover.png" width="210" height="210">
+          <div class="comment">comment</div>
+          <div class="comments">
+            <ul class="comment_to_akazora">
+              <li>歌って踊れるデザイナー</li>
+              <li>Pasraの秩序</li>
+            </ul>
+            <ul class="comment_to_sorah">
+              <li>ドヤ顔Rubyコミッター</li>
+              <li>最も協調性のないメンバー</li>
+            </ul>
+            <ul class="comment_to_tnk">
+              <li>常識人担当</li>
+              <li>納期をお知らせするお姉様</li>
+            </ul>
+            <ul class="comment_to_mactkg">
+            </ul>
+            <ul class="comment_to_chihirow">
+              <li>Pasraのスパイス</li>
+              <li>常識人時々エスパー</li>
+            </ul>
+            <ul class="comment_to_pastak">
+              <li>Pasraの料理長</li>
+              <li>一途</li>
+            </ul>
+            <ul class="comment_to_moccai">
+              <li>アイドル担当</li>
+              <li>安定したカラオケボイス</li>
+            </ul>
+            <ul class="comment_to_glass">
+              <li>hiの人</li>
+              <li>sora_hの弟子</li>
+            </ul>
+            <ul class="comment_to_pasra">
+              <li>美味しいレストランなのに</li>
+              <li>一切料理の話題ない。</li>
+              <li>ゲームしかしてなくてすいません</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member_desc"><span class="name">
+          <h3>mactkg</h3>
+          </span>
+          <dl>
+            <dt>Gender</dt>
+            <dd>Male</dd>
+          </dl>
+          <dl>
+            <dt>Birthday</dt>
+            <dd>1994/5/13</dd>
+          </dl>
+          <dl>
+            <dt>Egogram</dt>
+            <dd>babbb</dd>
+          </dl>
+          <dl>
+            <dt>FPS力</dt>
+            <dd>B</dd>
+          </dl>
+          <dl>
+            <dt>出現率</dt>
+            <dd>D</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="box_3_center icon_box" id="icon_pasra">
+        <div id="desc_inner"> </div>
+        <div id="orig_inner">
+          <p><img src="images/common/pasra.png" width="210" height="210" alt="pasra" class="icon"></p>
+        </div>
+        <div class="member_desc">
+          <p>Team Pasra とは</p>
+        </div>
+      </div>
+      <div class="box_3_side icon_box" id="icon_chihirow"> <img src="images/common/chihirow.png" width="210" height="210" alt="chihirow" class="icon">
+        <div class="jockeyonme"> <img src="images/common/hover.png" width="210" height="210">
+          <div class="comment">comment</div>
+          <div class="comments">
+            <ul class="comment_to_akazora">
+              <li>優しい</li>
+              <li>リーダー的存在</li>
+            </ul>
+            <ul class="comment_to_sorah">
+              <li>Ruby</li>
+              <li>笑い声が素敵</li>
+            </ul>
+            <ul class="comment_to_tnk">
+              <li>いたら楽しい</li>
+              <li>人間的に魅力</li>
+            </ul>
+            <ul class="comment_to_mactkg">
+              <li>たまごかけごはん</li>
+              <li>メディアアート</li>
+            </ul>
+            <ul class="comment_to_chihirow">
+            </ul>
+            <ul class="comment_to_pastak">
+              <li>神出鬼没</li>
+              <li>将来に期待</li>
+            </ul>
+            <ul class="comment_to_moccai">
+              <li>もかもか</li>
+              <li>一緒にゲームすることが多い</li>
+            </ul>
+            <ul class="comment_to_glass">
+              <li>hi</li>
+              <li>『ライ麦畑でつかまえて』</li>
+            </ul>
+            <ul class="comment_to_pasra">
+              <li>学びの共同体</li>
+              <li>おちつく空間</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member_desc"><span class="name">
+          <h3>chihirow</h3>
+          </span>
+          <dl>
+            <dt>Gender</dt>
+            <dd>?</dd>
+          </dl>
+          <dl>
+            <dt>Birthday</dt>
+            <dd>1991/10/25</dd>
+          </dl>
+          <dl>
+            <dt>Egogram</dt>
+            <dd>baabb</dd>
+          </dl>
+          <dl>
+            <dt>FPS力</dt>
+            <dd>D</dd>
+          </dl>
+          <dl>
+            <dt>出現率</dt>
+            <dd>C+</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box_3_side icon_box" id="icon_pastak"> <img src="images/common/pastal.png" width="210" height="210" alt="pastak" class="icon">
+        <div class="jockeyonme"> <img src="images/common/hover.png" width="210" height="210">
+          <div class="comment">comment</div>
+          <div class="comments">
+            <ul class="comment_to_akazora">
+              <li>実は僕より年上</li>
+              <li>リア充</li>
+              <li>色んな意味で賢い</li>
+              <li>高身長許せない</li>
+            </ul>
+            <ul class="comment_to_sorah">
+              <li>チビガキチビガキチビガキ</li>
+              <li>Ruby界隈で暴れてる</li>
+              <li>僕が育てました。</li>
+　　　　 <li>低身長だけど許さない</li>
+            </ul>
+            <ul class="comment_to_tnk">
+              <li>きっと可愛い。</li>
+              <li>自重しない所が良い</li>
+              <li>高身長許せない</li>
+            </ul>
+            <ul class="comment_to_mactkg">
+              <li>高身長許さない</li>
+              <li>つーか、でかい</li>
+              <li>ノリに同じ空気を感じる</li>
+            </ul>
+            <ul class="comment_to_chihirow">
+              <li>妖精</li>
+              <li>かわいい</li>
+              <li>ゆるふわ系</li>
+　　　　 <li>高身長だったとしても許す！</li>
+              <li>ロボットとお友達になりたい！</li>
+            </ul>
+            <ul class="comment_to_pastak">
+            </ul>
+            <ul class="comment_to_moccai">
+              <li>情緒不安定</li>
+              <li>ケータイへの拘り方がおかしい</li>
+              <li>高身長許せない</li>
+              <li>色んな意味で面白い</li>
+              <li>女の子にモテモテ</li>
+            </ul>
+            <ul class="comment_to_glass">
+              <li>謎の生命体</li>
+              <li>多分きっと高身長だし許せない</li>
+            </ul>
+            <ul class="comment_to_pasra">
+              <li>全体的に高身長なのが許せない</li>
+              <li>っていうか、FPSって何？</li>
+              <li>なんだかんだでサイト作っちゃう</li>
+              <li>位には仲良し</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member_desc"><span class="name">
+          <h3>pastak</h3>
+          </span>
+          <dl>
+            <dt>Gender</dt>
+            <dd>Male</dd>
+          </dl>
+          <dl>
+            <dt>Birthday</dt>
+            <dd>1993/9/15</dd>
+          </dl>
+          <dl>
+            <dt>Egogram</dt>
+            <dd>?????</dd>
+          </dl>
+          <dl>
+            <dt>FPS力</dt>
+            <dd>G</dd>
+          </dl>
+          <dl>
+            <dt>出現率</dt>
+            <dd>F</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="box_3_center icon_box" id="icon_moccai"> <img src="images/common/moccai.png" width="210" height="210" alt="moccai" class="icon">
+        <div class="jockeyonme"> <img src="images/common/hover.png" width="210" height="210">
+          <div class="comment">comment</div>
+          <div class="comments">
+            <ul class="comment_to_akazora">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ul>
+            <ul class="comment_to_sorah">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ul>
+            <ul class="comment_to_tnk">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ul>
+            <ul class="comment_to_mactkg">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ul>
+            <ul class="comment_to_chihirow">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ul>
+            <ul class="comment_to_pastak">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ul>
+            <ul class="comment_to_moccai">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ul>
+            <ul class="comment_to_glass">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ul>
+            <ul class="comment_to_pasra">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member_desc"><span class="name">
+          <h3>moccai</h3>
+          </span>
+          <dl>
+            <dt>Gender</dt>
+            <dd>Male</dd>
+          </dl>
+          <dl>
+            <dt>Birthday</dt>
+            <dd>1993/10/25</dd>
+          </dl>
+          <dl>
+            <dt>Egogram</dt>
+            <dd>cbaba</dd>
+          </dl>
+          <dl>
+            <dt>FPS力</dt>
+            <dd>B</dd>
+          </dl>
+          <dl>
+            <dt>出現率</dt>
+            <dd>C</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="box_3_side icon_box" id="icon_glass"> <img src="images/common/glass.png" width="210" height="210" alt="glass_saga" class="icon">
+        <div class="jockeyonme"> <img src="images/common/hover.png" width="210" height="210">
+          <div class="comment">comment</div>
+          <div class="comments">
+            <ul class="comment_to_akazora">
+              <li>俺に冷たい</li>
+              <li>高知能</li>
+            </ul>
+            <ul class="comment_to_sorah">
+              <li>ておくれ</li>
+              <li>Rubyの人</li>
+            </ul>
+            <ul class="comment_to_tnk">
+              <li>がんばって下さい</li>
+              <li>雑談担当</li>
+            </ul>
+            <ul class="comment_to_mactkg">
+              <li>XD</li>
+              <li>漂うリア充感</li>
+            </ul>
+            <ul class="comment_to_chihirow">
+              <li>くま</li>
+              <li>渾身のg91ブログ</li>
+            </ul>
+            <ul class="comment_to_pastak">
+              <li>頑張って下さい</li>
+              <li>文章書ける</li>
+            </ul>
+            <ul class="comment_to_moccai">
+              <li>無線</li>
+              <li>ブラ三</li>
+            </ul>
+            <ul class="comment_to_glass">
+            </ul>
+            <ul class="comment_to_pasra">
+              <li>基本的にゲームしかしてない</li>
+              <li>認めざるを得ないアスペ率の高さ</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member_desc"><span class="name">
+          <h3>Glass_saga</h3>
+          </span>
+          <dl>
+            <dt>Gender</dt>
+            <dd>Male</dd>
+          </dl>
+          <dl>
+            <dt>Birthday</dt>
+            <dd>1991/9/14</dd>
+          </dl>
+          <dl>
+            <dt>Egogram</dt>
+            <dd>bcaba</dd>
+          </dl>
+          <dl>
+            <dt>FPS力</dt>
+            <dd>F+</dd>
+          </dl>
+          <dl>
+            <dt>出現率</dt>
+            <dd>B</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"><img alt="" src="images/common/dummy.gif"></div>
+</div>
+</body>
 </html>
