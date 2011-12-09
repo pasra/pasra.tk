@@ -22,11 +22,11 @@ $(function() {
       }
       links = $("<div>").addClass('member_links').html($("#" + e.currentTarget.id + " .member_links").html());
       $("#" + e.currentTarget.id + " .comment").html("").append(links);
-      links.find("li").each(function(i, v) {
+      links.find("a").each(function(i, v) {
         var hint, o;
         hint = links.find(".member_link_hint");
         i = function() {
-          return hint.text($(v).find("a").attr('alt'));
+          return hint.text($(v).attr('alt'));
         };
         o = function() {
           return hint.text('');

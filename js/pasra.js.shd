@@ -24,9 +24,9 @@ $ ->
 
       links = $("<div>").addClass('member_links').html($("##{e.currentTarget.id} .member_links").html())
       $("##{e.currentTarget.id} .comment").html("").append links
-      links.find("li").each (i,v) ->
+      links.find("a").each (i,v) ->
         hint = links.find(".member_link_hint")
-        i = -> hint.text $(v).find("a").attr('alt')
+        i = -> hint.text $(v).attr('alt')
         o = -> hint.text ''
         $(this).hover i, o
       links.show()
