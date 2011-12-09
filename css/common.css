@@ -265,3 +265,9 @@ div#footer {
   font-weight: bold;
 }
 
+.comment { text-align: center; }
+.member_links { display: none; }
+.member_links ul li { list-style-type: none; float: left; margin-right: 5px; }
+.member_links ul { padding: 0; margin: 0; position: relative; left: 10px; bottom: 4px; }
+.member_links div.member_link_hint { position: relative; bottom: 50px; text-align: center; }
+.hint { position: absolute; background-color: white; }

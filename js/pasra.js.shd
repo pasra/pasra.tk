@@ -10,9 +10,7 @@ $ ->
   icon_in = (e) ->
     $(".jockeyonme").fadeOut 200
     $("#desc_inner").fadeOut 200
-    console.log $("#orig_inner")
     $("#orig_inner").fadeOut 200, ->
-      console.log new Date
       $("#desc_inner").html($(e.currentTarget).find(".member_desc").html()).fadeIn 100
       for jockey_ in $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme")
         jockey = $(jockey_)
@@ -24,7 +22,15 @@ $ ->
         comment.html comments[0].innerHTML
         comment.show()
 
-      $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme").fadeIn 100
+      links = $("<div>").addClass('member_links').html($("##{e.currentTarget.id} .member_links").html())
+      $("##{e.currentTarget.id} .comment").html("").append links
+      links.find("li").each (i,v) ->
+        hint = links.find(".member_link_hint")
+        i = -> hint.text $(v).find("a").attr('alt')
+        o = -> hint.text ''
+        $(this).hover i, o
+      links.show()
+      $(".icon_box .jockeyonme").fadeIn 100
 
       f = (target) ->
         ->

@@ -7,10 +7,8 @@ $(function() {
   icon_in = function(e) {
     $(".jockeyonme").fadeOut(200);
     $("#desc_inner").fadeOut(200);
-    console.log($("#orig_inner"));
     return $("#orig_inner").fadeOut(200, function() {
-      var comment, comments, f, interval, jockey, jockey_, _i, _j, _len, _len2, _ref;
-      console.log(new Date);
+      var comment, comments, f, interval, jockey, jockey_, links, _i, _j, _len, _len2, _ref;
       $("#desc_inner").html($(e.currentTarget).find(".member_desc").html()).fadeIn(100);
       _ref = $(".icon_box[id!='" + e.currentTarget.id + "'] .jockeyonme");
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -22,7 +20,21 @@ $(function() {
         comment.html(comments[0].innerHTML);
         comment.show();
       }
-      $(".icon_box[id!='" + e.currentTarget.id + "'] .jockeyonme").fadeIn(100);
+      links = $("<div>").addClass('member_links').html($("#" + e.currentTarget.id + " .member_links").html());
+      $("#" + e.currentTarget.id + " .comment").html("").append(links);
+      links.find("li").each(function(i, v) {
+        var hint, o;
+        hint = links.find(".member_link_hint");
+        i = function() {
+          return hint.text($(v).find("a").attr('alt'));
+        };
+        o = function() {
+          return hint.text('');
+        };
+        return $(this).hover(i, o);
+      });
+      links.show();
+      $(".icon_box .jockeyonme").fadeIn(100);
       f = function(target) {
         return function() {
           return $(".icon_box[id!='" + e.currentTarget.id + "'] .jockeyonme").each(function() {
