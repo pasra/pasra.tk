@@ -163,6 +163,17 @@
           </div>
         </div>
         {/block:Posts}
+
+        {block:Pagination}
+        <div class="box">
+          {block:PreviousPage}
+          <a class="prev_page" href="{PreviousPage}">←Prev</a>&nbsp;
+          {/block:PreviousPage}
+          {block:NextPage}
+          <a class="next_page" href="{NextPage}">Next→</a>
+          {/block:NextPage}
+        </div>
+        {/block:Pagination}
       </div>
       <div id="footer"><img alt="" src="http://akazora.cosmio.net/test/images/common/dummy.gif"></div>
     </div>
