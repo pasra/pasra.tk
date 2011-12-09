@@ -25,7 +25,7 @@ div#base {
 	text-align: center;
 	background: url("../images/common/base.png") repeat-y;
 	padding: 0px 0px 0px 0px;
-	margin: 60px auto 0px auto;
+	margin: 45px auto 0px auto;
 	z-index: 100;
 }
 h2 {
@@ -256,21 +256,9 @@ div#footer {
 	margin: -5px auto 0px auto;
 	height: 36px;
 }
-.member_links ul li {
-	list-style-type: none;
-	float: left;
-	margin-right: 5px;
-}
-.member_links ul {
-	padding: 0;
-	margin: 0;
-	position: relative;
-	left: 10px;
-	bottom: 4px;
-}
 .member_links div.member_link_hint {
 	position: relative;
-	bottom: 50px;
+	bottom: 55px;
 	text-align: center;
 }
 .hint {
