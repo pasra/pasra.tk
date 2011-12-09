@@ -11,6 +11,9 @@ $ ->
     $(".jockeyonme").fadeOut 200
     $("#desc_inner").fadeOut 200
     $("#orig_inner").fadeOut 200, ->
+      clearInterval(interval) for interval in intervals
+      intervals = []
+
       $("#desc_inner").html($(e.currentTarget).find(".member_desc").html()).fadeIn 100
       for jockey_ in $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme")
         jockey = $(jockey_)
@@ -45,18 +48,21 @@ $ ->
             comment.fadeOut(500, ((com)->
               (-> $(this).html(com).fadeIn(500)))(comments[comment[0].i].innerHTML))
 
-      clearInterval(interval) for interval in intervals
       intervals = [setInterval(f(e.currentTarget.id.replace(/^icon_/,"")), 3000)]
 
-  icon_out = (e) ->
-    $("#desc_inner").fadeOut 100
-    $(".jockeyonme").fadeOut 100
-    clearInterval(interval) for interval in intervals
-    intervals = []
+  icon_out = (e) -> undefined
+  #$("#desc_inner").fadeOut 100
+  #$(".jockeyonme").fadeOut 100
+  #clearInterval(interval) for interval in intervals
+  #intervals = []
 
   page_in = -> undefined
   page_out = ->
-    $("#orig_inner").fadeIn 200
+    $(".jockeyonme").fadeOut 100, ->
+      clearInterval(interval) for interval in intervals
+      intervals = []
+    $("#desc_inner").fadeOut 100, ->
+      setTimeout((-> $("#orig_inner").fadeIn(100)), 30)
 
   $("div.page").hover page_in, page_out
   $("div.icon_box").hover icon_in, icon_out
