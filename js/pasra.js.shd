@@ -3,54 +3,54 @@
 
 $ ->
   intervals = []
+  flag = false
+  $(".jockeyonme, #desc_inner").hide()
+  $("#orig_inner").show()
 
-  queue = []
-  queue_run = ->
-    fun = queue.shift()
-    fun() if fun
-    setTimeout(queue_run, 100)
-  setTimeout(queue_run, 1)
-
-  hover_in = (e) ->
-    $(".jockeyonme").hide()
+  icon_in = (e) ->
+    $(".jockeyonme").fadeOut 200
+    $("#desc_inner").fadeOut 200
+    console.log $("#orig_inner")
     $("#orig_inner").fadeOut 200, ->
-      $("#desc_inner").fadeOut 200, ->
-        $("#orig_inner").hide()
-        $(this).html($(e.currentTarget).find(".member_desc").html()).fadeIn(100, -> $("#orig_inner").hide())
-      $("#orig_inner").hide()
-    $("#orig_inner").hide()
-    for jockey_ in $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme")
-      jockey = $(jockey_)
+      console.log new Date
+      $("#desc_inner").html($(e.currentTarget).find(".member_desc").html()).fadeIn 100
+      for jockey_ in $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme")
+        jockey = $(jockey_)
 
-      comment = jockey.find(".comment")
-      comments = jockey.find(".comment_to_#{e.currentTarget.id.replace(/^icon_/,"")} li")
-
-      comment[0].i = 0
-
-      comment.html comments[0].innerHTML
-      comment.show()
-      jockey.fadeIn('fast')
-
-    f = ->
-      $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme").each ->
-        jockey = $(this)
-
-        comments = jockey.find(".comment_to_#{e.currentTarget.id.replace(/^icon_/,"")} li")
         comment = jockey.find(".comment")
+        comments = jockey.find(".comment_to_#{e.currentTarget.id.replace(/^icon_/,"")} li")
+        comment[0].i = 0
 
-        comment[0].i += 1
-        comment[0].i = 0 if comment[0].i >= comments.length
-        comment.fadeOut(500, ((com)-> (-> $(this).html(com).fadeIn(500)))(comments[comment[0].i].innerHTML))
+        comment.html comments[0].innerHTML
+        comment.show()
 
-    intervals.push setInterval(f, 3000)
-  hover_out = (e) ->
-    $("#desc_inner").fadeOut 100, ->
-      $("#orig_inner").fadeIn(200)
-      $("#desc_inner").hide()
+      $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme").fadeIn 100
+
+      f = (target) ->
+        ->
+          $(".icon_box[id!='#{e.currentTarget.id}'] .jockeyonme").each ->
+            jockey = $(this)
+
+            comments = jockey.find(".comment_to_#{target} li")
+            comment = jockey.find(".comment")
+
+            comment[0].i += 1
+            comment[0].i = 0 if comment[0].i >= comments.length
+            comment.fadeOut(500, ((com)->
+              (-> $(this).html(com).fadeIn(500)))(comments[comment[0].i].innerHTML))
+
+      clearInterval(interval) for interval in intervals
+      intervals = [setInterval(f(e.currentTarget.id.replace(/^icon_/,"")), 3000)]
+
+  icon_out = (e) ->
+    $("#desc_inner").fadeOut 100
+    $(".jockeyonme").fadeOut 100
     clearInterval(interval) for interval in intervals
     intervals = []
-    $(".jockeyonme").fadeOut('fast')
 
-  $("div.icon_box").hover(((e) -> queue.push(-> hover_in(e))), \
-                          ((e) -> queue.push(-> hover_out(e))) \
-                         )
+  page_in = -> undefined
+  page_out = ->
+    $("#orig_inner").fadeIn 200
+
+  $("div.page").hover page_in, page_out
+  $("div.icon_box").hover icon_in, icon_out
